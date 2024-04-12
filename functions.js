@@ -1,13 +1,20 @@
+/**
+ * sample function definition, this isnt 
+ * 
+ * @param {string} x 
+ */
 let sampFunc = function (x) {
     
 }
 
 sampFunc()
 
-//or
-function sampFunc(){
+/**
+ * another way to define a function
+ * 
+ */
+function sampFuncTwo(){
 
 }
 
-sampFunc()
-//both do the same thing
+sampFuncTwo()
