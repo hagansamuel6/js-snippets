@@ -69,9 +69,37 @@ for (let [index, item] of arrSix.entries()) {
 //we can use the foreach loop as well
 let arrRes = new Array();
 
-//for sparse arrays it does not invoke the element, 
+//for sparse arrays it does not invoke the element,
 arrSix.forEach((item) => {
   arrRes.unshift(item + "1");
 });
 
 console.log(arrRes);
+
+let data = [1, 2, 3, 4, 5];
+let sum = 0;
+
+data.forEach((value) => (sum += value));
+console.log("sum", sum);
+console.log("data", data);
+data.forEach((item, index, array) => {
+  array[index] = ++item;
+});
+console.log("data", data);
+
+let multiples = data.map((element) => ++element);
+console.log("data", multiples);
+
+let filter = data.filter((item) => item % 2 == 0); // return items that pass the test
+console.log("filtered data", filter);
+
+let found = data.find((item, index) => index == 3); //return first item that meets the condition, return undefined if nothing found
+console.log("found", found);
+
+let foundIndex = data.findIndex((item) => item / 2 == 0); //find the index of the first item found, returns -1 if nothing found
+
+let everyItem = data.every((item) => item / 2 == 0); // returns true if the passed function returns true for all items
+
+let someItem = data.some(item => item == 3); // if the first test passed, returns true
+
+let someIsNan = data.some(isNaN);
